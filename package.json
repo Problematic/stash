@@ -9,7 +9,7 @@
     "url": "git@github.com:problematic/stash.git"
   },
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "angular": "^1.5.0",
     "angular-resource": "^1.5.0",
     "angular-ui-router": "^0.2.18",
