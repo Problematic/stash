@@ -18,5 +18,9 @@
     "browserify": "^13.0.0",
     "browserify-incremental": "^3.0.1",
     "jquery": "^2.2.0"
+  },
+  "engines": {
+      "node": "4.2.x",
+      "npm": "3.5.x"
   }
 }
