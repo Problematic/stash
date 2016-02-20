@@ -31,6 +31,6 @@ module Stash
     end
 
     config.browserify_rails.source_map_environments << "development"
-    config.browserify_rails.commandline_options = "-t babelify"
+    # config.browserify_rails.commandline_options = "-t babelify"
   end
 end

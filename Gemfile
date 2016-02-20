@@ -13,10 +13,6 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
-gem 'foundation-rails'
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -29,6 +25,11 @@ gem 'redis-namespace'
 gem 'sidekiq'
 gem 'sinatra', :require => nil
 
+gem 'sprockets'
+gem 'sprockets-es6', require: ["sprockets/es6"]
+
+gem 'foundation-rails'
+gem 'ngannotate-rails'
 gem 'browserify-rails'
 
 # Use ActiveModel has_secure_password
