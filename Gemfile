@@ -51,4 +51,6 @@ group :development do
   gem 'guard-bundler', require: false
 
   gem 'rack-livereload'
+
+  gem 'foreman'
 end
