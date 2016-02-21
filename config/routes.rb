@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
-  resources :users
-  resources :sessions
+  resources :users, except: [:new, :edit]
+  resource :session, only: [:show, :create, :destroy]
+  post 'auth/verify-token' => 'auth#verify_token'
 
   require 'sidekiq/web'
   Sidekiq::Web.use Rack::Auth::Basic do |username, password|

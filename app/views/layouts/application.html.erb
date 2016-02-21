@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="stash">
+<html lang="en" ng-app="stash.app">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title><%= content_for?(:title) ? yield(:title) : "stash" %></title>
-
-  <%= stylesheet_link_tag    "application" %>
+  <meta name="google-signin-client_id" content="<%= ENV['GOOGLE_CLIENT_ID'] %>" />
+  <title><%= content_for?(:title) ? yield(:title) : "welcome" %> :: stash</title>
+  <%= stylesheet_link_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <h1>stash</h1>
   <%= yield %>
+  <%= javascript_include_tag "https://apis.google.com/js/platform.js?onload=gapiLoaded" %>
   <%= javascript_include_tag "application" %>
+  <script>
+    angular.module('stash.config')
+      .value('currentUser', <%= current_user ? raw(current_user.to_builder.target!) : 'null' %>);
+  </script>
 </body>
 </html>

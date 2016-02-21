@@ -31,7 +31,6 @@ gem 'sprockets'
 gem 'sprockets-es6', require: ["sprockets/es6"]
 
 gem 'foundation-rails'
-gem 'ngannotate-rails'
 gem 'browserify-rails'
 
 # Use ActiveModel has_secure_password

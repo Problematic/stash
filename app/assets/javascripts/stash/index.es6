@@ -1,10 +1,10 @@
-import jQuery from 'jquery';
 import angular from 'angular';
 import ngResource from 'angular-resource';
 import uiRouter from 'angular-ui-router';
 
-let m = angular.module('stash', [ngResource, uiRouter]);
+import stashAuth from './auth';
+const stashConfig = { name: 'stash.config' };
 
-m.run($log => $log.log('stash app started'));
+let m = angular.module('stash.app', [ngResource, uiRouter, stashAuth.name, stashConfig.name]);
 
-export default m;
+m.run($log => $log.log('stash.app started'));
