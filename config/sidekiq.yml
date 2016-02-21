@@ -1,0 +1,10 @@
+---
+    # Either the concurrency we set, or half the configured redis connection
+    # pool less two (sidekiq needs concurrency + 2 connections)... we default
+    # to a pool size of 20 because that's the max connection limit for the free
+    # tier of redis on Heroku
+    :concurrency: <%= ENV['SIDEKIQ_CONCURRENCY'] || (ENV.fetch('REDIS_POOL') { 20 }.to_i / 2 - 2) %>
+    :queues:
+        - [high, 4]
+        - [default, 2]
+        - [low, 1]
