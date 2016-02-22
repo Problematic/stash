@@ -1,10 +1,6 @@
-import angular from 'angular';
-import ngResource from 'angular-resource';
-import uiRouter from 'angular-ui-router';
+//= require_self
+//= require_tree .
 
-import stashAuth from './auth';
-const stashConfig = { name: 'stash.config' };
-
-let m = angular.module('stash.app', [ngResource, uiRouter, stashAuth.name, stashConfig.name]);
+let m = angular.module('stash.app', ['ngResource', 'ui.router', 'stash.auth', 'stash.config']);
 
 m.run($log => $log.log('stash.app started'));

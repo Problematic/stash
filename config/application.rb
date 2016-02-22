@@ -29,8 +29,5 @@ module Stash
     config.generators do |g|
       g.assets false
     end
-
-    config.browserify_rails.source_map_environments << "development"
-    config.browserify_rails.commandline_options = "--extension=.es6"
   end
 end

@@ -1,8 +1,4 @@
-import angular from 'angular';
-import ngResource from 'angular-resource';
-
-let m = angular.module('stash.auth', [ngResource]);
-let fs = require('fs');
+let m = angular.module('stash.auth', ['ngResource']);
 
 m.run($log => $log.log('stash.auth started'));
 
@@ -41,5 +37,3 @@ m.directive('authButton', (gapi, $http) => {
         }
     };
 });
-
-export default m;

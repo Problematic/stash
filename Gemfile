@@ -4,6 +4,8 @@ ruby '2.2.4'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'rails_12factor'
 
+gem 'bundler', '>= 1.8.4'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use postgresql as the database for Active Record
@@ -18,8 +20,6 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'ngannotate-rails'
-
 gem 'connection_pool'
 
 gem 'hiredis'
@@ -33,7 +33,15 @@ gem 'sprockets'
 gem 'sprockets-es6', require: ["sprockets/es6"]
 
 gem 'foundation-rails'
-gem 'browserify-rails'
+gem 'ngannotate-rails'
+gem 'angular-rails-templates'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-jquery'
+  gem 'rails-assets-angular'
+  gem 'rails-assets-angular-resource'
+  gem 'rails-assets-angular-ui-router'
+end
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
