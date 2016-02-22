@@ -18,14 +18,12 @@
     "brfs": "^1.4.3",
     "browserify": "^13.0.0",
     "browserify-incremental": "^3.0.1",
-    "browserify-ngannotate": "^2.0.0",
     "jquery": "^2.2.0"
   },
   "browserify": {
       "transform": [
           "babelify",
-          "brfs",
-          "browserify-ngannotate"
+          "brfs"
       ]
   },
   "engines": {
